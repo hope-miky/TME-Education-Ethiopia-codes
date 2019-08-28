@@ -31,24 +31,68 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-for (int i =0; i < 8; i++){
-  int d = i%2;
-  if (d==0)
-        mcp.digitalWrite(i, true);
-  }
+ zero();
+ delay(1000);
+ clear1();
+ delay(1000);
+ one();
+ delay(1000);
+ clear1();
+  delay(1000);
+ two();
+ delay(1000);
+ clear1();
+ delay(1000);
+ three();
+ delay(1000);
+ clear1();
+ delay(1000);
+ four();
+ delay(1000);
+ clear1();
+ delay(1000);
+ five();
+ delay(1000);
+ clear1();
+ delay(1000);
+ six();
+ delay(1000);
+ clear1();
+ delay(1000);
+ seven();
+ delay(1000);
+ clear1();
+ delay(1000);
+ eight();
+ delay(1000);
+ clear1();
+ delay(1000);
+ nine();
+ delay(1000);
+ clear1();
+ delay(1000);
 }
 
 
 void clear1(){
-  mcp.digitalWrite(0, false);
-  mcp.digitalWrite(1, false);
-  mcp.digitalWrite(2, false);
-  mcp.digitalWrite(3, false);
-  mcp.digitalWrite(4, false);
-  mcp.digitalWrite(5, false);
+for (int i =0; i<8; i++){
+   mcp.digitalWrite(i, false);
+  }
+  }
+
+  ///////// zero /////////
+void zero(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, true);
+  mcp.digitalWrite(5, true);
   mcp.digitalWrite(6, false);
   }
 
+  ////////    one    ///////
+  
   void one(){
   mcp.digitalWrite(0, false);
   mcp.digitalWrite(1, true);
@@ -57,9 +101,9 @@ void clear1(){
   mcp.digitalWrite(4, false);
   mcp.digitalWrite(5, false);
   mcp.digitalWrite(6, false);
-
   }
 
+////////////   two     ////////////
 void two(){
   mcp.digitalWrite(0, true);
   mcp.digitalWrite(1, true);
@@ -69,5 +113,92 @@ void two(){
   mcp.digitalWrite(5, false);
   mcp.digitalWrite(6, true);
   }
-  
-  
+
+
+//////////////    three   //////////////
+
+void three(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, false);
+  mcp.digitalWrite(5, false);
+  mcp.digitalWrite(6, true);
+  }
+
+
+  ///////////// four    ////////////////
+  void four(){
+  mcp.digitalWrite(0, false);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, false);
+  mcp.digitalWrite(4, false);
+  mcp.digitalWrite(5, true);
+  mcp.digitalWrite(6, true);
+  }
+
+
+  //////////////////    five    ////////
+
+ void five(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, false);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, false);
+  mcp.digitalWrite(5, true);
+  mcp.digitalWrite(6, true);
+  }
+
+
+  /////////////////   six    /////////////////
+
+  void six(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, false);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, true);
+  mcp.digitalWrite(5, true);
+  mcp.digitalWrite(6, true);
+  }
+
+
+  ////////////////   seven  ////////////////
+
+  void seven(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, false);
+  mcp.digitalWrite(4, false);
+  mcp.digitalWrite(5, false);
+  mcp.digitalWrite(6, false);
+  }
+
+
+  ///////////////   eight  //////// 
+
+  void eight(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, true);
+  mcp.digitalWrite(5, true);
+  mcp.digitalWrite(6, true);
+  }
+
+////////////////   nine    /////////////
+
+void nine(){
+  mcp.digitalWrite(0, true);
+  mcp.digitalWrite(1, true);
+  mcp.digitalWrite(2, true);
+  mcp.digitalWrite(3, true);
+  mcp.digitalWrite(4, false);
+  mcp.digitalWrite(5, true);
+  mcp.digitalWrite(6, true);
+  }
