@@ -1,3 +1,10 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Tesfamichael Mola on Sptember 14
+ * OLED Example 2     -    drawing bluemoon ethiopia logo
+*/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

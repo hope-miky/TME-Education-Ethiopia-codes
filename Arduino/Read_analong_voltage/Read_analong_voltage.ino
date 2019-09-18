@@ -1,3 +1,9 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Robe Getachew on June 14
+ * Potentiometer reading 
+*/
 void setup() {
   Serial.begin(9600);
 }

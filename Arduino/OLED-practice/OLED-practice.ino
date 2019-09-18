@@ -1,3 +1,10 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Tesfamichael Mola 
+ * SNAKE game using OLED Display    *** On progress
+*/
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

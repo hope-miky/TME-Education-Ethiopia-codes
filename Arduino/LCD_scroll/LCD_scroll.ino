@@ -1,3 +1,10 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Robe getachew on Sptember 1
+ * LCD Scroll example
+*/
+
 #include <Wire.h>
 #include <hd44780.h>
 #include <hd44780ioClass/hd44780_I2Cexp.h>

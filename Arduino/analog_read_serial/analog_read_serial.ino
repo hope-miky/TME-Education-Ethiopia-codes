@@ -1,3 +1,11 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Robe getachew on June 18
+ * Analog read and serial printing example
+*/
+
+
 void setup() {
   // initialize serial communication at 9600 bits per second:
   Serial.begin(9600);

@@ -1,3 +1,11 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Tesfamichael Mola on Sptember 14
+ * OLED Game on          *** on progress
+*/
+
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>

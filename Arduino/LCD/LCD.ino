@@ -1,4 +1,9 @@
-
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Robe Getachew on Sptember 12
+ * LCD Example 
+*/
 
 
 #include "includes.h"

@@ -1,3 +1,11 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Tesfamichael Mola on Augest 22
+ * Displaying images in OLED Display
+*/
+
+
 #include <SPI.h>
 #include <Wire.h>
 #include <Adafruit_GFX.h>
@@ -11,7 +19,7 @@
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 #define OLED_RESET     4 // Reset pin # (or -1 if sharing Arduino reset pin)
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
+
 
 // 'download', 128x64px
 // 'africa', 128x64px
@@ -93,7 +101,7 @@ const unsigned char myBitmap [] PROGMEM = {
 
 void setup() {
   Serial.begin(9600);
-  lcd.begin(16, 2);
+
   // SSD1306_SWITCHCAPVCC = generate display voltage from 3.3V internally
   if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) { // Address 0x3D for 128x64
     Serial.println(F("SSD1306 allocation failed"));
@@ -107,7 +115,7 @@ void setup() {
 
   // Clear the buffer
   display.clearDisplay();
-  lcd.clear(); 
+
   
   
   display.clearDisplay();
@@ -127,10 +135,7 @@ void setup() {
 }
 
 void loop() {
-  lcd.setCursor(1, 0);
-  lcd.print("TME Education");
-  lcd.setCursor(3, 1);
-  lcd.print("Workshop");
+ 
 
   
   delay(1000);

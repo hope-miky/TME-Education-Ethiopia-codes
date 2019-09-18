@@ -1,3 +1,11 @@
+/*
+ * TME Education Ethiopia
+ * www.tmeeducation.com
+ * This code is proudly made by Tesfamichael Mola on Sptember 14
+ * &-segment display practice
+*/
+
+
 #include "Adafruit_MCP23008.h"
 Adafruit_MCP23008 mcp;
 
