@@ -1,5 +1,5 @@
-# TME-Education-Ethiopia-Arduino-Python-codes
-Arduino Codes for TME Education Arduino and Python board v.2
+# TME-Education-Ethiopia
+Arduino and Python codes and teaching materials 
 =======
 <hr>
 
