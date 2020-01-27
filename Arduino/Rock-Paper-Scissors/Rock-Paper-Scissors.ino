@@ -1,4 +1,3 @@
-#include <Adafruit_GFX.h>
 #include <Wire.h>
 #include <Adafruit_SSD1306.h>
 
@@ -221,6 +220,7 @@ const unsigned char paperBitmap [] PROGMEM = {
 int val = 0;
 bool player1 = false, player2 = false;
 int score1, score2;
+
 void setup() {
   pinMode(INPUTPIN, INPUT);
 rock.Gname = "ROCK";
