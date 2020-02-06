@@ -37,7 +37,6 @@ their communities first. Thatâ€™s why another substantial aspect of the programâ
 activity was establishing the role of an ambassador.
 
 <hr>
-Arduino Codes for TME Education board v.2
 Bitmap converter - https://diyusthad.com/image2cpp
 
 **The repository contain a lot of functionality for our Arduino board**
