@@ -57,6 +57,9 @@ Bitmap converter - https://diyusthad.com/image2cpp
 * [Read analoge serial](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/analog_read_serial/analog_read_serial.ino)
 * [Quize 1](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/quize/quize.ino)
 
+### Games 
+* [Rock-Paper-Scissor](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/Rock-Paper-Scissors/Rock-Paper-Scissors.ino)
+* [Car-Arcade(On development)](* [Rock-Paper-Scissor](https://github.com/Tesfamichael1074/TME-Education-Ethiopia codes/blob/master/Arduino/Rock-Paper-Scissors/Rock-Paper-Scissors.ino))
 
 
 
