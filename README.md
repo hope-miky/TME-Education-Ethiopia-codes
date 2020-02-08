@@ -37,7 +37,6 @@ their communities first. Thatâ€™s why another substantial aspect of the programâ
 activity was establishing the role of an ambassador.
 
 <hr>
-Arduino Codes for TME Education board v.2
 Bitmap converter - https://diyusthad.com/image2cpp
 
 **The repository contain a lot of functionality for our Arduino board**
@@ -57,6 +56,9 @@ Bitmap converter - https://diyusthad.com/image2cpp
 * [Read analoge serial](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/analog_read_serial/analog_read_serial.ino)
 * [Quize 1](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/quize/quize.ino)
 
+### Games 
+* [Rock-Paper-Scissor](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/Rock-Paper-Scissors/Rock-Paper-Scissors.ino)
+* [Car-Arcade](https://github.com/Tesfamichael1074/TME-Education-Ethiopia-codes/blob/master/Arduino/Rock-Paper-Scissors/Rock-Paper-Scissors.ino) -- On Development
 
 
 
