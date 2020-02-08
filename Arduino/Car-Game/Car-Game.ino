@@ -23,14 +23,6 @@ const unsigned char playerBitmap [] PROGMEM = {
 };
 
 
-// 15x25px
-const unsigned char obstacleBitmap [] PROGMEM = {
-  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x07, 0xc0, 0x0f, 0xe0, 0x0f, 0xe0, 
-  0x0f, 0xe0, 0x0c, 0x60, 0x18, 0x30, 0x1f, 0xf0, 0x0f, 0xe0, 0x0f, 0xe0, 0x0f, 0xe0, 0x0f, 0xe0, 
-  0x08, 0x20, 0x0c, 0x60, 0x0f, 0xe0, 0x07, 0xc0, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
-  0x00, 0x00
-};
-
 
 
 
@@ -45,17 +37,13 @@ void setup() {
   delay(400); // Pause for 2 seconds
   Serial.begin(9600);
   pinMode(A1, INPUT);
-  obstacle1.bitmap = obstacleBitmap;
-  obstacle2.bitmap = obstacleBitmap;
-  obstacle3.bitmap = obstacleBitmap;
-  obstacle1.posy = 0;
-  obstacle2.posy = 0;
-  obstacle3.posy = 0;
-  obstacle1.active == true;
-  obstacle2.active == true;
-  obstacle3.active == true;
-}
+  
 
+}
+bool obstacle = false;
+int lposx, lposy;
+int wid = 20, hig = 10;
+int del = 1;
 void loop() {
   display.clearDisplay();
   display.drawLine(34,0,34,64, WHITE);
@@ -63,6 +51,12 @@ void loop() {
   lineDrawer();
   drawPlayer(playerPose());
   drawObstacle();
+  display.setTextColor(WHITE);
+  display.setTextSize(1.0);
+  display.setCursor(0,20); 
+  display.print("score");
+  display.setCursor(5,30); 
+  display.print(millis()/1000);
   display.display();
   delay(100);
 
@@ -71,17 +65,43 @@ void loop() {
 
 
   void drawObstacle(){
-   
 
-    if (obstacle1.active == false){
-        obstacle1.posy++;
-        display.drawBitmap(40, obstacle1.posy,  obstacle1.bitmap, 15, 25, WHITE);
-    }
+   if (obstacle == false){
+    obstacle = true;
+    lposx = randomGen();
+    lposy = 5;
+    display.fillRect(lposx, lposy, wid, hig, WHITE);
+   }
+
+   else {
+      if (lposy<64){
+        display.fillRect(lposx, nextypose(), wid, hig, WHITE);
+        display.display();
+      }
+
+        else{
+          obstacle = false;
+        }
+   }
 
     
   }
 
- 
+ int nextypose(){
+  int temp = millis()/1000;
+  if ( temp >= 5)
+      del = 2;
+  if (temp >= 15)
+      del = 4;
+  if (temp >= 25)
+      del = 6;
+  if (temp >= 35)
+      del = 8;
+  if (temp >= 45)
+      del = 10;
+  lposy = lposy + del;
+  return lposy;
+ }
 
   
 
@@ -142,6 +162,6 @@ void loop() {
   }
 
   int randomGen(){
-    return random(200)%2;
+    return random(34,80);
   }
   
