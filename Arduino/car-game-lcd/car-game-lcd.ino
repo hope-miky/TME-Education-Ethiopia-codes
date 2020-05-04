@@ -1,8 +1,18 @@
-#include <Wire.h>
+/*  Tesfamichael Molla Ali
+ *  LCD Car Game
+ *  v0.1.0
+ *  -------------
+ *  In this program you will learn how to build a small scale 
+ *  car game using LCD display and Potentionmeter
+ */ 
+
+//Importing libraries we need for the project
 #include <hd44780.h>
 #include <hd44780ioClass/hd44780_I2Cexp.h>
 #include <Adafruit_MCP23008.h>
 
+
+// Custom charactors used in the project both for the player and oponents
 byte playerCar[] = {
   B00001,
   B11100,
@@ -36,12 +46,15 @@ byte oponentCar2[] = {
   B10001
 };
 
+//Structure datatype for the player
 struct playerModel{
   int playerid;
   int posx;
   int posy;
 }player;
 
+
+// Structure datatype for oponents
 struct oponentModel{
   int oponentid;
   bool isactive;
@@ -55,11 +68,14 @@ void setup() {
   
   lcd.begin(16 ,2);  //Initialize 16x2 lcd
   lcd.clear(); 
+
+  // Creating the custom chars
   lcd.setCursor(0,0);
   lcd.createChar(1 , playerCar);                              
   lcd.createChar(2 , oponentCar1);
   lcd.createChar(3 , oponentCar2);
-  
+
+  // Initializing structure properties
   player.playerid = 1;
   player.posx = 0;
   player.posy = 0;
@@ -73,7 +89,8 @@ void setup() {
   oponent2.posx = 0;
   oponent2.posy = 1;
   oponent2.isactive = true;
-  
+
+  //Displaying intro message
  intro();
 
   
@@ -81,17 +98,14 @@ void setup() {
 
 void loop() {
   
+  //Main loop
   player.posy = potValue();
   singleStep();
-  
   setDisplay();
   checkColution();
   delay(500);
   
   lcd.clear();
-
-
-  
 
 }
 
@@ -137,13 +151,15 @@ void setDisplay(){
 }
 
 void checkColution(){
+
+  //Check for collutions 
   
   if((player.posx == oponent1.posx) && (player.posy == oponent1.posy)){
-      // Game over
+      // Display Game over
       displayGameOver();
   }
   else if((player.posx == oponent2.posx) && (player.posy == oponent2.posy)){
-      // Game over'
+      // Display Game over'
       displayGameOver();
   }else {
     
