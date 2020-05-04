@@ -390,6 +390,8 @@ void loop() {
   display.display();
   delay(3000);
 
+  val = random(0, 1000) % 3;
+
   display.clearDisplay();
   display.setTextSize(1.0);
   display.setCursor(30,20); 
