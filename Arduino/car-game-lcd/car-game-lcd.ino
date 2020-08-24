@@ -1,4 +1,4 @@
-/*  Tesfamichael Molla Ali
+ /*  Tesfamichael Molla Ali
  *  LCD Car Game
  *  v0.1.0
  *  -------------
@@ -12,7 +12,7 @@
 #include <Adafruit_MCP23008.h>
 
 
-// Custom charactors used in the project both for the player and oponents
+// Custom characters used in the project both for the player and oponents
 byte playerCar[] = {
   B00001,
   B11100,
@@ -93,7 +93,6 @@ void setup() {
   //Displaying intro message
  intro();
 
-  
 }
 
 void loop() {
@@ -102,7 +101,7 @@ void loop() {
   player.posy = potValue();
   singleStep();
   setDisplay();
-  checkColution();
+  checkCollision();
   delay(500);
   
   lcd.clear();
@@ -115,7 +114,6 @@ int potValue(){
   }
 
 void singleStep(){
-  
   
   if ((oponent1.isactive) && (oponent1.posx > 0)){
     oponent1.posx -= 1;
@@ -134,7 +132,6 @@ void singleStep(){
     
   }
 
-  
 }
 
 void setDisplay(){
@@ -150,7 +147,7 @@ void setDisplay(){
     
 }
 
-void checkColution(){
+void checkCollision(){
 
   //Check for collutions 
   
